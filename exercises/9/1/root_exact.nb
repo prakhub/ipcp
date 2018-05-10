@@ -1,0 +1,118 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3268,        108]
+NotebookOptionsPosition[      2448,         86]
+NotebookOutlinePosition[      2788,        101]
+CellTagsIndexPosition[      2745,         98]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{"-", "x"}], "]"}], "\[Equal]", "x"}], ",", "x"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.724698024539809*^9, 
+  3.72469808902486*^9}},ExpressionUUID->"cc82636e-488f-405a-8acd-\
+5e19420e8480"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve","ifun",
+   "\"Inverse functions are being used by \
+\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\), so some solutions may not be found; use \
+Reduce for complete solution information.\"",2,8,8,15762363928690256132,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.72469803163865*^9, 
+  3.724698089349622*^9}},ExpressionUUID->"176b6efc-747e-4a59-a8ca-\
+b67597157fb0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"x", "\[Rule]", 
+    RowBox[{"ProductLog", "[", "1", "]"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.724698031639639*^9, 
+  3.724698089358448*^9}},ExpressionUUID->"f1260ae0-0e09-4fd2-be5c-\
+d5fc0f1761b2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"x", "\[Rule]", 
+      RowBox[{"ProductLog", "[", "1", "]"}]}], "}"}], "}"}], ",", "40"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.724698114710259*^9, 3.724698121059826*^9}},
+ NumberMarks->False,ExpressionUUID->"a206d6ee-cea3-40e4-8fae-e095e8e3c864"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+   "x", "\[Rule]", 
+    "0.5671432904097838729999686622103555497538157871865125081352`40."}], 
+   "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.724698091249078*^9, 
+  3.7246981216140127`*^9}},ExpressionUUID->"5da082c9-6789-4693-9a74-\
+7972504d6bef"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"N", "["}]], "Input",
+ CellChangeTimes->{{3.724698094182276*^9, 
+  3.724698101479916*^9}},ExpressionUUID->"f9a415c9-4813-44ee-8ab9-\
+e6bc3bbb19b3"]
+},
+WindowSize->{808, 753},
+WindowMargins->{{329, Automatic}, {50, Automatic}},
+FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 292, 9, 31, "Input",ExpressionUUID->"cc82636e-488f-405a-8acd-5e19420e8480"],
+Cell[875, 33, 421, 10, 41, "Message",ExpressionUUID->"176b6efc-747e-4a59-a8ca-b67597157fb0"],
+Cell[1299, 45, 268, 7, 35, "Output",ExpressionUUID->"f1260ae0-0e09-4fd2-be5c-d5fc0f1761b2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1604, 57, 345, 9, 31, "Input",ExpressionUUID->"a206d6ee-cea3-40e4-8fae-e095e8e3c864"],
+Cell[1952, 68, 307, 9, 92, "Output",ExpressionUUID->"5da082c9-6789-4693-9a74-7972504d6bef"]
+}, Open  ]],
+Cell[2274, 80, 170, 4, 31, "Input",ExpressionUUID->"f9a415c9-4813-44ee-8ab9-e6bc3bbb19b3"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
