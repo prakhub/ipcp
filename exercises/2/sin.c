@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main () {
-
+    //sin uses radians
     float x;
     printf("Please enter number to calculate sin() of\n");
     scanf("%f",&x);

@@ -10,7 +10,7 @@ int main (){
  	float h = -1;
 	float t;
 	while (h<0) {
-		printf("Enter starting height \n");
+		printf("Enter starting height > 0 \n");
 		scanf("%f",&h);
 	}
 	t = sqrt(2*h/g);
