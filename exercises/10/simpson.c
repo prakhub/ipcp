@@ -12,7 +12,7 @@ double getI (double a, double b, int n) {
     double h = (b-a)/n;
     double I = 0;
     I += fAt(a) + fAt(b);
-    for (int i = 1; i < n-1; i++){
+    for (int i = 1; i <= n-1; i++){
         if (i % 2 == 0){
             I += 2 * fAt(a +h*i);
         } else {
