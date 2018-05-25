@@ -32,6 +32,8 @@ int getSteps_c (int seed){
     while (x != 100) {
         int roll = rand() % 6;
         x+= roll;
+        if (x == 50) x = 45;
+        if (x == 20) x = 30;
         if (x > 100) x = 100 -(x%100);
         counter++;
     }
