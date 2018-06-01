@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Reads a year from the user and checks if it is a leap year
+//The programm will read years until a valid one (>0) is entered.
 int main () {
     printf("Please enter a year to check for beig a leap year\n");
     int input = -10;
