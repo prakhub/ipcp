@@ -15,7 +15,7 @@ int main () {
 	int counter_max = 0;
 	int number_max = 0;
 	
-	for (int j = 1; j <= pow(10,5); j++){
+	for (int j = 1; j <= pow(10,6); j++){
 		i = j;
 		int counter = 0;
 		while (i != 1){

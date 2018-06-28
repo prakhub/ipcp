@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define N 1000000
+#define N 10000	
 #define mu 0
 #define sigma 0.02
 
@@ -12,6 +12,12 @@ typedef struct {
     float v [3];
     float t;
 } particle;
+
+void printParticle (particle * p);
+void initializeParticle (particle *p , int offset);
+void getNewVelocities(particle * p);
+float computeAverage (float array [N]);
+float computeStdev (float array [N], float average);
 
 void printParticle (particle * p){
     printf("x,y,z = \n");
@@ -38,28 +44,35 @@ void initializeParticle (particle *p , int offset) {
     */
     p->x[0] = r * cos(theta)*sin(phi);
     p->x[1] = r * sin(theta)*sin(phi);
-    p->x[2] = r * cos(theta);
-
-    //velocities
-    float u1 = fabs(rand()) / RAND_MAX;
-    //printf("u1 = %f\n",u1 );
-    float u2 = fabs(rand()) / RAND_MAX;
-    //printf("u1 = %f\n",u2 );
-
-    p->v[0] = sqrt(-2*log(u1)) * cos (2 * M_PI * u2) * sigma;
-    p->v[1] = sqrt(-2*log(u1)) * sin (2 * M_PI * u2) * sigma;
-    u1 = fabs(rand()) / RAND_MAX;
-    p->v[2] = sqrt(-2*log(u1)) * sin (2 * M_PI * u2) * sigma;
+    p->x[2] = r * cos(phi);
+    
+	getNewVelocities(p);	
 }
 
+void getNewVelocities(particle * p){
+	//velocities
+    float u1 = (float)rand() / RAND_MAX;
+    //printf("u1 = %f\n",u1 );
+    float u2 = (float)rand() / RAND_MAX;
+    //printf("u1 = %f\n",u2 );
+	p->v[0] = sqrt(-2*log(u1)) * cos (2 * M_PI * u2) * sigma;
+    p->v[1] = sqrt(-2*log(u1)) * sin (2 * M_PI * u2) * sigma;
+    u1 = (float)rand() / RAND_MAX;
+    u2 = (float)rand() / RAND_MAX;
+
+    p->v[2] = sqrt(-2*log(u1)) * sin (2 * M_PI * u2) * sigma;
+}
 void computeTimeForParticleToLeave (particle * p){
     //do as long as the particle is int the sphere.
     float t = 0;
     float dt = 1;
-    while (fabs(p->x[0]) < 1 && fabs(p->x[1]) < 1 && fabs(p->x[2]) < 1){
+    while ( (p->x[0]*p->x[0]+ p->x[1]*p->x[1] + p->x[2]*p->x[2]) <1){
         for (int i = 0; i < 3; i++) {
             p->x[i] += p->v[i] * dt;
         }
+        getNewVelocities(p);
+        //printParticle(p);
+
         t += dt;
     }
     p->t = t;
